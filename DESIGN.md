@@ -12,9 +12,25 @@ The system will consist of the following components:
 - **Authentication**: User authentication will be handled using Keycloak to ensure secure access to the application.
 - **Deployment**: The application will be containerized using Docker and deployed on a cloud platform such as AWS or Heroku for scalability and reliability.
 
-# Entities
+## Entities
 
 - **Person**: Represents a user in the system who can submit updates and view summaries.
 - **Update**: Represents a daily update submitted by a person.
 - **Project**: Represents a project that updates can be associated with. Multiple people may be working on the same project. Each person can submit updates for multiple projects.
 - **Summary**: Represents a high-level summary generated from multiple updates. Summaries can be viewed by project or by person.
+
+## Code Structure
+
+The codebase will be structured as follows:
+
+```
+next-flask/
+├── frontend/          # Next.js application
+├── backend/           # Flask API application
+├── chatbot/           # Slack bot application
+├── database/          # Database schema and migrations
+├── docker/            # Docker configuration files
+├── deployment/        # Deployment scripts and configurations
+├── docs/              # Documentation files
+└── tests/             # Playwright test cases for the application
+```
